@@ -6,6 +6,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 #Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n', '~> 4.0'
+
+gem 'enum_help'
 #Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 #Translations for the devise gem
