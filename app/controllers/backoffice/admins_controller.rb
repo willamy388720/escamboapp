@@ -17,7 +17,7 @@ class Backoffice::AdminsController < BackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.email} foi cadastrada com sucesso!"
+      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.name} foi cadastrada com sucesso!"
     else
       render :new
     end
@@ -28,16 +28,16 @@ class Backoffice::AdminsController < BackofficeController
 
   def update
     if @admin.update(params_admin)
-      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.email} foi atualizada com sucesso!"
+      redirect_to backoffice_admins_path, notice: "O Administrador #{@admin.name} foi atualizada com sucesso!"
     else
       render :edit
     end
   end
 
   def destroy
-    admin_email = @admin.email
+    admin_name = @admin.name
     if @admin.destroy
-      redirect_to backoffice_admins_path, notice: "O Administrador #{admin_email} foi excluido com sucesso!"
+      redirect_to backoffice_admins_path, notice: "O Administrador #{admin_name} foi excluido com sucesso!"
     else
       render :index
     end
@@ -55,6 +55,6 @@ class Backoffice::AdminsController < BackofficeController
       if passwd.blank? && passwd_confirmation.blank?
         params[:admin].except!(:password, :password_confirmation)
       end
-      params.require(:admin).permit(:name, :email, :password, :password_confirmation)
+      params.require(:admin).permit(policy(@admin).permitted_attributes)
     end
 end
