@@ -6,6 +6,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 #Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n', '~> 4.0'
+#Minimal authorization through OO design and pure Ruby classes
+gem "pundit"
 
 gem 'enum_help'
 #Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
@@ -37,8 +39,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

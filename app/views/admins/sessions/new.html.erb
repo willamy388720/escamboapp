@@ -9,10 +9,10 @@
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name, role:"form")) do |f| %>  
                       <fieldset>
                           <div class="form-group">
-                              <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "E-mail", type:"email"%>
+                              <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "#{t('labels.email')}", type:"email"%>
                           </div>
                           <div class="form-group">
-                              <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password", type:"password"%>
+                              <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"#{t('labels.password')}", type:"password"%>
                           </div>
                           <div class="checkbox">
                               <label>
@@ -20,7 +20,7 @@
                               </label>
                           </div>
                           <!-- Change this to a button or input when using this as a form -->
-                          <%= f.submit "Log in", class:"btn btn-lg btn-success btn-block" %>
+                          <%= f.submit "#{t('labels.enter')}", class:"btn btn-lg btn-success btn-block" %>
                       </fieldset>
                   <% end %>
               </div>
