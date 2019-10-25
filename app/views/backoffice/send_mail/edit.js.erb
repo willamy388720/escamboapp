@@ -3,6 +3,6 @@ $(function(){
     $('h4.modal-title').text('Enviar mensagem para <%= @admin.name %>')
     $('#sendMailModal').modal();
     $('#sendMailModal').on('shown.bs.modal', function(){
-        $('#message-text').focus();
+        $('#subject-text').focus();
     });
 });

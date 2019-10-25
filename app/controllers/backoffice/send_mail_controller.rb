@@ -7,6 +7,9 @@ class Backoffice::SendMailController < ApplicationController
     end
 
     def create
-        #
+        @admin = Admin.find(params[:id])
+        respond_to do |format|
+            format.js
+        end
     end
 end
