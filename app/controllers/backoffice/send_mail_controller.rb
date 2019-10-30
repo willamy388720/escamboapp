@@ -7,7 +7,8 @@ class Backoffice::SendMailController < ApplicationController
     end
 
     def create
-        @admin = Admin.find(params[:id])
+        AdminMailer.send_message(current_admin, params[:'recipient-name'], params[:'subject-text'], params[:'message-text']).deliver_now
+
         respond_to do |format|
             format.js
         end
