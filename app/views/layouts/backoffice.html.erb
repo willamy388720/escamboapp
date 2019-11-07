@@ -48,16 +48,12 @@
     </div>
     <!-- /#wrapper -->
 
-    <% if notice%>
-        <script>
-            $.notify("<%= notice %>", "success");
-        </script>
+    <% if notice %>
+        <%= javascript_tag "$.notify('#{notice}', 'success');" %>
     <% end %>
 
-    <% if alert%>
-        <script>
-            $.notify("<%= alert %>", "error");
-        </script>
+    <% if alert %>
+        <%= javascript_tag "$.notify('#{alert}', 'error');" %>
     <% end %>
 </body>
 

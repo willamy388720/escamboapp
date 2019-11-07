@@ -2,7 +2,7 @@ $(function(){
     let $sendMailModal = $('#sendMailModal');
 
     // Setting email and name on Form
-    $('#recipient-name').val('<%= @admin.email %>');
+    $('#recipient-text').val('<%= @admin.email %>');
     $('h4.modal-title').text("Enviar mensagem para <%= @admin.name %>");
 
     // Shows Modal
