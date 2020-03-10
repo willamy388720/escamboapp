@@ -21,10 +21,12 @@ namespace :utils do
 
     100.times do
       Ad.create!(
-        title: Faker::Lorem.setence([2,3,4,5].sample),
-        description: LeroleroGenerate.paragraph(Random.rand(3)),
+        title: Faker::Lorem.sentence,
+        description: Faker::Lorem.paragraph,
         member: Member.all.sample,
-        category: Category.all.sample
+        category: Category.all.sample,
+        price: "#{Random.rand(500)},#{Random.rand(99)}",
+        picture: File.new(Rails.root.join('public', 'template', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       ) 
     end
 

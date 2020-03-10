@@ -8,6 +8,10 @@ gem 'rails', '4.2.5'
 gem 'rails-i18n', '~> 4.0'
 #Minimal authorization through OO design and pure Ruby classes
 gem "pundit"
+#Integration of RubyMoney - Money with Rails
+gem 'money-rails', '~>1.12'
+#Easy file attachment management for ActiveRecord https://thoughtbot.com
+gem "paperclip", "~> 5.0.0"
 
 gem 'enum_help'
 #Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
