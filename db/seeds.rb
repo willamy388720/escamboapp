@@ -32,3 +32,12 @@ puts "Cadastrando o ADMINISTRADOR PADRÃO..."
         role: 0)
 puts "ADMINISTRADOR PADRÃO cadastradO com sucesso!"
 #########################################################
+#########################################################
+puts "Cadastrando o MEMBRO PADRÃO..."
+    Member.create!(
+        email: "member@member.com",
+        password: "123456",
+        password_confirmation: "123456",
+    )
+puts "MEMBRO PADRÃO cadastradO com sucesso!"
+#########################################################
