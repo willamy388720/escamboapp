@@ -11,7 +11,7 @@ gem "pundit"
 #Integration of RubyMoney - Money with Rails
 gem 'money-rails', '~>1.12'
 #Easy file attachment management for ActiveRecord https://thoughtbot.com
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 #jQuery UI for the Rails asset pipeline
 gem 'jquery-ui-rails'
 

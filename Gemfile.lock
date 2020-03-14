@@ -56,7 +56,7 @@ GEM
     bootstrap_sb_admin_base_v2 (0.3.6)
       font-awesome-rails
       jquery-rails
-    builder (3.2.3)
+    builder (3.2.4)
     byebug (11.0.1)
     choice (0.2.0)
     climate_control (0.2.0)
@@ -70,7 +70,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     crass (1.0.4)
     debug_inspector (0.0.3)
     devise (4.6.2)
@@ -133,7 +133,7 @@ GEM
     mimemagic (0.3.4)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.14.0)
     monetize (1.9.4)
       money (~> 6.12)
     money (6.13.7)
@@ -146,7 +146,7 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    paperclip (5.0.0)
+    paperclip (5.2.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
       cocaine (~> 0.5.5)
@@ -238,7 +238,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    tzinfo (1.2.5)
+    tzinfo (1.2.6)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
@@ -272,7 +272,7 @@ DEPENDENCIES
   kaminari-i18n
   lerolero_generator
   money-rails (~> 1.12)
-  paperclip (~> 5.0.0)
+  paperclip (~> 5.2.0)
   pundit
   rails (= 4.2.5)
   rails-assets-animate-css!
