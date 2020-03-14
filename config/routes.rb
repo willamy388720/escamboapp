@@ -14,15 +14,14 @@ Rails.application.routes.draw do
 
     namespace :profile do
       resources :dashboard, only: [:index]
+      resources :ads, only: [:index, :edit, :update, :new,:create]
     end
 
-    namespace :profile do
-      resources :ads, only: [:index]
-    end
+    resources :ad_detail, only: [:show]
   end
 
   devise_for :admins, :skip => [:registrations]
-  devise_for :members
+  devise_for :members, controllers: { sessions: 'members/sessions' }
   root 'site/home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

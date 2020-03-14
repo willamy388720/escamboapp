@@ -12,6 +12,8 @@ gem "pundit"
 gem 'money-rails', '~>1.12'
 #Easy file attachment management for ActiveRecord https://thoughtbot.com
 gem "paperclip", "~> 5.0.0"
+#jQuery UI for the Rails asset pipeline
+gem 'jquery-ui-rails'
 
 gem 'enum_help'
 #Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
@@ -25,9 +27,15 @@ source 'https://rails-assets.org' do
  
   gem 'rails-assets-bootbox' 
 
-  gem 'rails-assets-notifyjs'
+  gem 'rails-assets-bootstrap.growl'
+
+  gem 'rails-assets-animate-css'
 
   gem 'rails-assets-bootstrap'  
+
+  gem 'rails-assets-bootstrap-markdown'
+
+  gem 'rails-assets-marked'
 
 end
 # Use sqlite3 as the database for Active Record
@@ -40,6 +48,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+#The safe Markdown parser, reloaded.
+gem 'redcarpet'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -66,6 +76,8 @@ group :development, :test do
   gem "rails-erd" 
   #A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+  gem 'doctor_ipsum'
   #O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
   gem 'lerolero_generator'
 end

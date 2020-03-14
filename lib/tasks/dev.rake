@@ -54,25 +54,33 @@ namespace :dev do
     5.times do
       Ad.create!(
         title: Faker::Lorem.sentence,
-        description: Faker::Lorem.paragraph,
+        description_md: markdown_fake,
+        description_short: Faker::Lorem.sentence,
         member: Member.first,
         category: Category.all.sample,
         price: "#{Random.rand(500)},#{Random.rand(99)}",
-        picture: File.new(Rails.root.join('public', 'template', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
+        finish_date: Date.today + Random.rand(90),
+        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       )
     end
 
     100.times do
       Ad.create!(
         title: Faker::Lorem.sentence,
-        description: Faker::Lorem.paragraph,
+        description_md: markdown_fake,
+        description_short: Faker::Lorem.sentence,
         member: Member.all.sample,
         category: Category.all.sample,
         price: "#{Random.rand(500)},#{Random.rand(99)}",
-        picture: File.new(Rails.root.join('public', 'template', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
+        finish_date: Date.today + Random.rand(90),
+        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
       ) 
     end
 
     puts "ANÚNCIOS cadastrados com sucesso!"  
+  end
+
+  def markdown_fake
+    %x(ruby -e "require 'doctor_ipsum'; puts DoctorIpsum::Markdown.entry")
   end
 end

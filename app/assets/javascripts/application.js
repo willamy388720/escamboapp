@@ -12,4 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.growl   
 
+/* Spiin */
+$(document).ready(function() {
+    // Global ajax cursor change
+    $(document)
+      .ajaxStart(function () {
+          $('#global-spin').fadeIn('slow');
+      })
+      .ajaxStop(function () {
+          $('#global-spin').fadeOut('slow');
+      });
+  });
