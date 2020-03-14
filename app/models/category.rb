@@ -1,5 +1,8 @@
 class Category < ActiveRecord::Base
     
+    include FriendlyId
+    friendly_id :description, use: :slugged
+
     # Associations
     has_many :ads
     
