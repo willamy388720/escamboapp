@@ -54,6 +54,10 @@ gem 'redcarpet'
 gem 'friendly_id'
 # Wiselinks
 gem 'wiselinks'
+# Kaminari
+gem 'kaminari'
+# Kaminari-i18n
+gem 'kaminari-i18n'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
