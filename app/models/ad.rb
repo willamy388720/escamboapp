@@ -23,6 +23,7 @@ class Ad < ActiveRecord::Base
   scope :to_the, ->(member) { where(member: member) }
   scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
   scope :search, ->(term, page = 1) { where("title LIKE ?", "%#{term}%").page(page).per(QTT_PER_PAGE) }
+  scope :random, ->(quatity) {limit(quatity).order("RANDOM()")}
 
   #paperclip
   has_attached_file :picture, styles: { large: "800x300#", medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"

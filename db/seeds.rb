@@ -34,10 +34,16 @@ puts "ADMINISTRADOR PADRÃO cadastradO com sucesso!"
 #########################################################
 #########################################################
 puts "Cadastrando o MEMBRO PADRÃO..."
-    Member.create!(
+    member = Member.new(
         email: "member@member.com",
         password: "123456",
         password_confirmation: "123456",
     )
+    member.build_profile_member
+
+    member.profile_member.first_name = Faker::Name.first_name
+    member.profile_member.second_name = Faker::Name.last_name
+
+    member.save!
 puts "MEMBRO PADRÃO cadastradO com sucesso!"
 #########################################################
