@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_filter :store_current_location, :unless => :devise_controller?
+  
   #Pundit 
   include Pundit
 
@@ -28,4 +30,9 @@ class ApplicationController < ActionController::Base
     redirect_to(request.referrer || root_path)
   end
 
+  private
+
+    def store_current_location
+      store_location_for(:member, request.url)
+    end
 end

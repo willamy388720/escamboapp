@@ -1,8 +1,11 @@
 class Ad < ActiveRecord::Base
-  
+
   # Constants
   QTT_PER_PAGE = 6
   
+  # RatyRate gem
+  ratyrate_rateable "quality"
+
   # Callbacks
   before_save :md_to_html
 
@@ -18,7 +21,7 @@ class Ad < ActiveRecord::Base
   # Scopes
   scope :descending_order, ->(page = 1) { order(created_at: :desc).page(page).per(QTT_PER_PAGE) }
   scope :to_the, ->(member) { where(member: member) }
-  scope :by_category, ->(id) { where(category: id) }
+  scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
   scope :search, ->(term, page = 1) { where("title LIKE ?", "%#{term}%").page(page).per(QTT_PER_PAGE) }
 
   #paperclip
