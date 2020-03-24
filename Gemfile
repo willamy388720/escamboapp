@@ -23,6 +23,12 @@ gem 'devise-i18n'
 #Rails gem of the Bootstrap based admin theme SB Admin 2.
 gem 'bootstrap_sb_admin_base_v2'
 
+gem 'prawn-rails'
+
+gem 'wicked_pdf', '~> 1.1.0'
+
+gem 'wkhtmltopdf-binary', '~> 0.12.3'
+
 source 'https://rails-assets.org' do
  
   gem 'rails-assets-bootbox' 
