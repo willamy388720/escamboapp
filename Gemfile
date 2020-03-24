@@ -58,6 +58,8 @@ gem 'wiselinks'
 gem 'kaminari'
 # Kaminari-i18n
 gem 'kaminari-i18n'
+# Pagseguro lib
+gem 'pagseguro-oficial', '~> 2.5.0'
 
 gem 'ratyrate'
 # Use jquery as the JavaScript library
@@ -79,16 +81,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  #Better error page for Rack apps
+  # Better error page for Rack apps
   gem "better_errors"
-  #Generate Entity-Relationship Diagrams for Rails applications
+  #  Entity-Relationship Diagrams for Rails applications
   gem "rails-erd" 
-  #A library for generating fake data such as names, addresses, and phone numbers.
+  # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
   gem 'doctor_ipsum'
-  #O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+  # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
   gem 'lerolero_generator'
+
+  # Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :development do

@@ -45,6 +45,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    aitch (0.5.0)
+      nokogiri (>= 1.6.0)
     arel (6.0.4)
     bcrypt (3.1.13)
     better_errors (2.5.1)
@@ -146,6 +148,11 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pagseguro-oficial (2.5.0)
+      aitch (~> 0.2)
+      i18n (~> 0.7)
+      json (~> 1.8)
+      nokogiri (~> 1.6)
     paperclip (5.0.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
@@ -155,6 +162,8 @@ GEM
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     rack (1.6.11)
+    rack-cors (1.0.6)
+      rack (>= 1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5)
@@ -273,8 +282,10 @@ DEPENDENCIES
   kaminari-i18n
   lerolero_generator
   money-rails (~> 1.12)
+  pagseguro-oficial (~> 2.5.0)
   paperclip (~> 5.0.0)
   pundit
+  rack-cors
   rails (= 4.2.5)
   rails-assets-animate-css!
   rails-assets-bootbox!

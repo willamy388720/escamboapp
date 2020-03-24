@@ -3,6 +3,9 @@ class Ad < ActiveRecord::Base
   # Constants
   QTT_PER_PAGE = 6
   
+  # Status
+  enum status: [:active, :processing, :sold]
+
   # RatyRate gem
   ratyrate_rateable "quality"
 

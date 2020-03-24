@@ -1,6 +1,15 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
+  # Rack CORS configuration
+  config.middleware.insert_before 0, "Rack::Cors" do
+    allow do
+      origins '*'
+      resource '*', headers: :any, methods: [:get, :post, :options]
+    end
+  end
+  
   #Devise config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
