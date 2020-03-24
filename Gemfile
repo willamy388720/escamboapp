@@ -27,6 +27,8 @@ gem 'prawn-rails'
 
 gem 'wicked_pdf', '~> 1.1.0'
 
+gem "chartkick"
+
 gem 'wkhtmltopdf-binary', '~> 0.12.3'
 
 source 'https://rails-assets.org' do
