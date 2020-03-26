@@ -23,14 +23,19 @@ end
 puts "CATEGORIAS cadastradas com sucesso!"
 #########################################################
 #########################################################
+
 puts "Cadastrando o ADMINISTRADOR PADRÃO..."
-    Admin.create!(
+    adm = Admin.create!(
         name: "Administrador Geral",
         email: "admin@admin.com",
         password: "123456",
-        password_confirmation: "123456",
-        role: 0)
-puts "ADMINISTRADOR PADRÃO cadastradO com sucesso!"
+        password_confirmation: "123456"
+        # role: 0
+    )
+    adm.add_role(Role.availables[0])
+    adm.add_role(Role.availables[1])
+puts "ADMINISTRADOR PADRÃO cadastrad0 com sucesso!"
+
 #########################################################
 #########################################################
 puts "Cadastrando o MEMBRO PADRÃO..."
@@ -45,5 +50,5 @@ puts "Cadastrando o MEMBRO PADRÃO..."
     member.profile_member.second_name = Faker::Name.last_name
 
     member.save!
-puts "MEMBRO PADRÃO cadastradO com sucesso!"
+puts "MEMBRO PADRÃO cadastrado com sucesso!"
 #########################################################
