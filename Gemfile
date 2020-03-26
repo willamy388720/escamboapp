@@ -61,6 +61,8 @@ gem 'kaminari-i18n'
 # Pagseguro lib
 gem 'pagseguro-oficial', '~> 2.5.0'
 
+gem 'searchkick'
+
 gem 'ratyrate'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

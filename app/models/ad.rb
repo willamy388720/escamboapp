@@ -1,5 +1,8 @@
 class Ad < ActiveRecord::Base
 
+  # Searchkick Gem
+  searchkick
+
   # Constants
   QTT_PER_PAGE = 6
   
@@ -25,7 +28,7 @@ class Ad < ActiveRecord::Base
   scope :descending_order, ->(page = 1) { order(created_at: :desc).page(page).per(QTT_PER_PAGE) }
   scope :to_the, ->(member) { where(member: member) }
   scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
-  scope :search, ->(term, page = 1) { where("title LIKE ?", "%#{term}%").page(page).per(QTT_PER_PAGE) }
+  # scope :search, ->(term, page = 1) { where("title LIKE ?", "%#{term}%").page(page).per(QTT_PER_PAGE) }
   scope :random, ->(quatity) {limit(quatity).order("RANDOM()")}
 
   #paperclip
